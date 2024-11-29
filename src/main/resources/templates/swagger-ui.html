@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Documentation</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.52.5/swagger-ui.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.52.5/swagger-ui-bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.52.5/swagger-ui-standalone-preset.js"></script>
+    <script>
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        window.onload = function() {
+            const token = getCookie('token');
+            if (token) {
+                const ui = SwaggerUIBundle({
+                    url: "/v3/api-docs",
+                    dom_id: '#swagger-ui',
+                    presets: [
+                        SwaggerUIBundle.presets.apis,
+                        SwaggerUIStandalonePreset
+                    ],
+                    layout: "StandaloneLayout",
+                    requestInterceptor: (req) => {
+                        req.headers['Authorization'] = 'Bearer ' + token;
+                        return req;
+                    }
+                });
+
+                // Set the token in Swagger UI's auth configuration
+                ui.initOAuth({
+                    clientId: "your-client-id",
+                    clientSecret: "your-client-secret",
+                    realm: "your-realm",
+                    appName: "your-app-name",
+                    scopeSeparator: " ",
+                    additionalQueryStringParams: {}
+                });
+
+                ui.authActions.authorize({
+                    auth: {
+                        name: "Bearer",
+                        schema: {
+                            type: "apiKey",
+                            in: "header",
+                            name: "Authorization"
+                        },
+                        value: "Bearer " + token
+                    }
+                });
+            } else {
+                alert('Token not found. Please login first.');
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="swagger-ui"></div>
+</body>
+</html>

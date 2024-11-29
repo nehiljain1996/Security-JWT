@@ -1,0 +1,16 @@
+C:\Security JWT\src\main\java\com\example\demo\controller\UserController.java
+C:\Security JWT\src\main\java\com\example\demo\controller\UserInventoryController.java
+C:\Security JWT\src\main\java\com\example\demo\dto\UserDto.java
+C:\Security JWT\src\main\java\com\example\demo\config\SpringSecurity.java
+C:\Security JWT\src\main\java\com\example\demo\service\impl\UserServiceImpl.java
+C:\Security JWT\src\main\java\com\example\demo\DemoApplication.java
+C:\Security JWT\src\main\java\com\example\demo\service\UserService.java
+C:\Security JWT\src\main\java\com\example\demo\entity\User.java
+C:\Security JWT\src\main\java\com\example\demo\repository\RoleRepository.java
+C:\Security JWT\src\main\java\com\example\demo\service\CustomUserDetailsService.java
+C:\Security JWT\src\main\java\com\example\demo\repository\UserRepository.java
+C:\Security JWT\src\main\java\com\example\demo\dto\InventoryDTO.java
+C:\Security JWT\src\main\java\com\example\demo\filter\JwtAuthenticationFilter.java
+C:\Security JWT\src\main\java\com\example\demo\entity\Role.java
+C:\Security JWT\src\main\java\com\example\demo\config\SwaggerConfig.java
+C:\Security JWT\src\main\java\com\example\demo\controller\AuthController.java

@@ -1,0 +1,16 @@
+com\example\demo\DemoApplication.class
+com\example\demo\entity\User.class
+com\example\demo\dto\InventoryDTO.class
+com\example\demo\entity\Role.class
+com\example\demo\repository\RoleRepository.class
+com\example\demo\service\UserService.class
+com\example\demo\service\CustomUserDetailsService.class
+com\example\demo\dto\UserDto.class
+com\example\demo\repository\UserRepository.class
+com\example\demo\config\SwaggerConfig.class
+com\example\demo\controller\AuthController.class
+com\example\demo\controller\UserInventoryController.class
+com\example\demo\config\SpringSecurity.class
+com\example\demo\controller\UserController.class
+com\example\demo\filter\JwtAuthenticationFilter.class
+com\example\demo\service\impl\UserServiceImpl.class
